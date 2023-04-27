@@ -20,9 +20,6 @@ def get_unique_job_types(path: str) -> List[str]:
         job_types.add(job["job_type"])
     return job_types
 
-    
-print(get_unique_job_types("data/jobs.csv"))
-
 
 def filter_by_job_type(jobs: List[Dict], job_type: str) -> List[Dict]:
     """Filters a list of jobs by job_type
