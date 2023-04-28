@@ -27,23 +27,24 @@ def get_min_salary(path: str) -> int:
 
 
 def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
-    min_salary = job.get("min_salary", None)
-    max_salary = job.get("max_salary", None)
+    try:
+        min_salary = job.get("min_salary", None)
+        max_salary = job.get("max_salary", None)
 
-    if min_salary is None or max_salary is None:
-        raise ValueError
-    if not isinstance(job["min_salary"], int) or not isinstance(
-        job["max_salary"], int
-    ):
-        raise ValueError
-    if int(job["min_salary"]) >= int(job["max_salary"]):
-        raise ValueError
-    if salary is None or isinstance(salary, (list, dict)) or callable(salary):
+        if min_salary is None or max_salary is None:
+            raise ValueError("Dados não podem ser nulos")
+        if int(job["min_salary"]) > int(job["max_salary"]):
+            raise ValueError("Salario minimo não pode ser maior que o maximo")
+        if (
+            salary is None
+            or isinstance(salary, (list, dict))
+            or callable(salary)
+        ):
+            raise ValueError
+    except (ValueError, TypeError):
         raise ValueError
 
-    return int(job["min_salary"]) <= int(salary) and int(
-        job["max_salary"]
-    ) >= int(salary)
+    return int(job["min_salary"]) <= int(salary) <= int(job["max_salary"])
 
 
 def filter_by_salary_range(
@@ -54,8 +55,14 @@ def filter_by_salary_range(
 
     for job in jobs:
         try:
-            if matches_salary_range(job, salary) is True:
+            if matches_salary_range(job, salary):
                 list_valid_salary.append(job)
-        except ValueError:
+        except (ValueError, TypeError):
             continue
+
     return list_valid_salary
+
+
+##
+
+# print(filter_by_salary_range(jobs, 4000))

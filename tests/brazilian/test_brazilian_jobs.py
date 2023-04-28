@@ -3,14 +3,8 @@ from src.pre_built.brazilian_jobs import read_brazilian_file
 
 def test_brazilian_jobs():
     mock = [
-        {
-            "salary": "2000", 
-            "title": "Maquinista",
-            "type": "trainee"},
-        {
-            "salary": "3000", 
-            "title": "Motorista", 
-            "type": "full time"},
+        {"salary": "2000", "title": "Maquinista", "type": "trainee"},
+        {"salary": "3000", "title": "Motorista", "type": "full time"},
         {
             "salary": "4000",
             "title": "Analista de Software",
@@ -26,23 +20,14 @@ def test_brazilian_jobs():
             "title": "Auxiliar administrativo",
             "type": " full time",
         },
-        {
-            "salary": "1400", 
-            "title": "Auxiliar usinagem", 
-            "type": " full time"},
+        {"salary": "1400", "title": "Auxiliar usinagem", "type": " full time"},
         {
             "salary": "1400",
             "title": "Auxiliar de padaria",
             "type": " full time",
         },
-        {
-            "salary": "1400", 
-            "title": "Analista Contábil", 
-            "type": " full time"},
-        {
-            "salary": "5000", 
-            "title": "Gerente comercial", 
-            "type": " full time"},
+        {"salary": "1400", "title": "Analista Contábil", "type": " full time"},
+        {"salary": "5000", "title": "Gerente comercial", "type": " full time"},
         {
             "salary": "4000",
             "title": "Analista de Departamento Pessoal",
@@ -63,10 +48,7 @@ def test_brazilian_jobs():
             "title": "Pessoa Programadora",
             "type": " full time",
         },
-        {
-            "salary": "3000", 
-            "title": "Ux Designer", 
-            "type": " full time"},
+        {"salary": "3000", "title": "Ux Designer", "type": " full time"},
         {
             "salary": " 1400",
             "title": "Auxiliar de manutenção",
