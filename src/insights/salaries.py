@@ -28,11 +28,9 @@ def get_min_salary(path: str) -> int:
 
 def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
     try:
-        min_salary = job.get("min_salary", None)
-        max_salary = job.get("max_salary", None)
+        job.get("min_salary", None)
+        job.get("max_salary", None)
 
-        if min_salary is None or max_salary is None:
-            raise ValueError("Dados não podem ser nulos")
         if int(job["min_salary"]) > int(job["max_salary"]):
             raise ValueError("Salario minimo não pode ser maior que o maximo")
         if (
@@ -41,7 +39,7 @@ def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
             or callable(salary)
         ):
             raise ValueError
-    except (ValueError, TypeError):
+    except (ValueError, TypeError, KeyError):
         raise ValueError
 
     return int(job["min_salary"]) <= int(salary) <= int(job["max_salary"])
