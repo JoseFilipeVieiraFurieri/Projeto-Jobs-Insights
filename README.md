@@ -1,5 +1,5 @@
 <h4 align="center">
-  <img width="180px" alt="trybe wallet logo" src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/04/DD-Mimic-.jpg" />
+  <img width="180px" alt="trybe wallet logo" src="https://cdn-icons-png.flaticon.com/512/2621/2621053.png" />
   <br /><br />
 </h4>
 
