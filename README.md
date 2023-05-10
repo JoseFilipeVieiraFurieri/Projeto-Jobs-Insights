@@ -35,7 +35,7 @@ Projeto realizado durante módulo de Ciencias da Computação do curso de desenv
 <details>
   <summary><strong>:memo: Habilidades</strong></summary><br />
 
-- Patricas dos conceitos iniciais de python.
+- Pratica dos conceitos iniciais de python.
 - Criar funçoes e importaçoes;
 - Loops de repetição;
 - Leitura e edição de arquivos JSON e CSV;
